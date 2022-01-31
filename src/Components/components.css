@@ -1,0 +1,49 @@
+.container{
+    display:flex;
+    flex-direction: column;
+   
+}
+
+.table-completed{
+    display:flex;
+    justify-content:center;
+    align-self:center;
+   
+}
+.table-head{
+    background-color:rgb(214, 208, 208);
+   
+}
+.table-body{
+    background-color: honeydew;
+}
+.pagination-container{
+    display:flex;
+    justify-content:end;
+    width:100%;
+    font-weight:500;
+ 
+}
+ .pagination-container a{
+
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    color:black;
+    height:50px;
+    width:50px;
+    text-decoration:none;
+    transition: background-color .2s;
+    border: 1px solid rgb(170, 165, 165);
+    cursor:pointer;
+    margin-left:10px;
+    font-size:medium;
+}
+.pagination-container a.active{
+
+    color:black;
+    border: 5px solid #6eb9db;
+}
+.pagination-container  a.disabled{
+    opacity:0.3;
+}
