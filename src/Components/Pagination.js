@@ -23,19 +23,12 @@ const Pagination = ({ totalPages, setPage }) => {
     } else if (currentButton > 4 && currentButton < pages.length - 2) {
       const sliced1 = pages.slice(currentButton - 2, currentButton);
       const sliced2 = pages.slice(currentButton, currentButton + 1);
-      tempNumberOfPages = [
-        1,
-        dotsLeft,
-        ...sliced1,
-        ...sliced2,
-        dotsRight,
-        pages.length,
-      ];
+      tempNumberOfPages = [1, dotsLeft,...sliced1,...sliced2, dotsRight,pages.length];
     } else if (currentButton > pages.length - 3) {
       const sliced = pages.slice(pages.length - 4);
       tempNumberOfPages = [1, dotsLeft, ...sliced];
     }else if (currentButton === dotsInitial) {
-      setCurrentButton(arrOfCurrButtons[3] + 1);
+      setCurrentButton(arrOfCurrButtons[arrOfCurrButtons.length-3] + 1);
     } else if (currentButton === dotsLeft) {
       setCurrentButton(arrOfCurrButtons[3] - 2);
     }else if(currentButton === dotsRight){
